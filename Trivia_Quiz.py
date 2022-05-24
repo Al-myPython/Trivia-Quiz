@@ -5,14 +5,12 @@ def game_instructions():
     # Print instructions to the game
     print('-----------------------------------------------------------------------------------------------------------')
     print("""    Welcome to our first Dynamic Pub Quiz!\n 
-    There are 40 questions in all and every correct answer scores 1 point. 
+    There are 40 questions in all, and points for correct answers will be awarded based on question difficulty level. 
     Questions are either multiple choice or True / False. Your final score will be tallied 
-    at the end in the form of percentage correct. The team with the highest percentage wins the game!
+    at the end of the game, and the team with the most points wins the game!
     Good luck! / Bonne Chance!\n""")
 
-
 game_instructions()
-
 
 def pub_quiz():
     # A multiple choice and True/False Pub Quiz wherein awarded points are commensurate with question difficulty.
@@ -20,7 +18,6 @@ def pub_quiz():
     question_num = 1
     blue = 'blue'
     green = 'green'
-
 
     for x in questions:
         print()
@@ -33,7 +30,6 @@ def pub_quiz():
         choices.append(choice)
         question_num += 1
 
-
         if choice == questions.get(x):
             cprint('CORRECT!', green)
         else:
@@ -45,6 +41,7 @@ def pub_quiz():
 
 def point_values():
     pass
+    # Ca me pose une colle!
 
 
 questions = {
@@ -59,6 +56,5 @@ options = [["A. French fries", "B. French kiss", "C. French leave", "D. Dutch tr
            ["A. A Bloody Mary", "B. Sex on the Beach", "C. A Harvey Wallbanger", "D. A Screwball"]]
 
 correct_answers = ('D. Dutch treat', 'D. Fort Huachuca', 'C. Du coq à l’ane', 'D. A Screwball',)
-points = (1,1,2,2)
 
 pub_quiz()
